@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+    <title>Simple Registry of Users</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">View All</a></li>
+                <li><a href="add.html">Add User<span class="sr-only">(current)</span></a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+<section>
+    <div class="container">
+        <dir class="row">
+            <div class="col-md-4 col-sm-8"><b>Edit user data:</b></div>
+            <div class="col-md-2 col-sm-4">User Id =${user.userId}</div>
+        </dir>
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+
+                <form accept-charset="UTF-8" action="/edit.html?userId=${user.userId}" method="POST">
+
+                    <div class="input-group">
+                        <span class="input-group-addon">Last Name *</span>
+                        <input type="text" name="lastName" value="${user.lastName}" required="true" class="form-control"
+                               placeholder="Last Name">
+                    </div>
+                    <br>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">First Name *</span>
+                        <input type="text" name="firstName" value="${user.firstName}" required="true"
+                               class="form-control" placeholder="First Name"></div>
+                    <br>
+
+
+                    <div class="input-group">
+                        <span class="input-group-addon">Date of Birth</span>
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" value="${user.dateOfBirth!''}">
+                    </div>
+                    <br>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">Salary</span>
+                        <input type="text" name="salary" value="${user.salary?c!''}" class="form-control"
+                               placeholder="Salary"></div>
+
+                    <br>
+                    <button class="btn-sent" name="button" type="submit" value="save">Save</button>
+                    <button class="btn-delete" name="button" type="submit" value="delete">Delete</button>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container pager notes">
+            <p>© Copyright 2017. All Rights Reserved)</p>
+            <p>For support please contact olazareva82@gmail.com</p>
+        </div>
+    </nav>
+</section>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>

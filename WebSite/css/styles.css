@@ -1,0 +1,46 @@
+h1 {
+	font-size: 20px;
+	color: red;
+}
+
+body .my-class#nav-id{
+	background-color: blue;
+}
+
+.my-class p {
+	color: green;
+}
+
+.navbar-header .navbar-logo {
+	padding: 0;
+}
+
+.navbar-logo img {
+	width: 60px;
+	height: 60px;
+}
+
+.navbar-logo a img {
+	width: 20px;
+	height: 20px;
+}
+
+.list-about-me > li {
+  font-size: 24px;
+  font-family: serif;
+  display: inline-block;
+  padding: 15px;
+  margin: auto;
+  
+  
+}
+
+.div-text{
+  margin: auto;	
+  margin-left: 20px;
+}
+
+
+.btn-sent {
+  margin-right: 0;
+}
